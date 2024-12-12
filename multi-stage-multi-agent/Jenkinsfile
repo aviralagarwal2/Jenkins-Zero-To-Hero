@@ -15,11 +15,11 @@ pipeline {
       }
       steps {
         sh 'node --version'
-      }
-      steps{
+     
+      
         sh '''echo "console.log("Hello world");" > hi.js
         node hi.js'''
-      }
+       }
     }
   }
 }
