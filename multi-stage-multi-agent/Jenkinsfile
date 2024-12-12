@@ -14,12 +14,15 @@ pipeline {
         docker { image 'node:16-alpine' }
       }
       steps {
+        // Check Node.js version
         sh 'node --version'
-     
-      
-        sh '''echo "console.log("Hello world");" > hi.js
-        node hi.js'''
-       }
+
+        // Create and execute the JavaScript file
+        sh '''
+        echo "console.log(\\"Hello world\\");" > hi.js
+        node hi.js
+        '''
+      }
     }
   }
 }
